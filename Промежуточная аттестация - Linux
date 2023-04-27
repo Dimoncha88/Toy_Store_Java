@@ -1,0 +1,45 @@
+dk@dk-VB:~$ mkdir Игрушки_для_школьников
+dk@dk-VB:~$ mkdir Игрушки_для_дошколят
+dk@dk-VB:~$ ls
+ 1                                    Видео                    Музыка
+ developers                           Документы                Общедоступные
+ nginx_1.18.0-6ubuntu14.3_amd64.deb   Загрузки                'Рабочий стол'
+ snap                                 Игрушки_для_дошколят     Шаблоны
+ test                                 Игрушки_для_школьников
+ test2                                Изображения
+
+dk@dk-VB:~$ cd Игрушки_для_школьников/
+dk@dk-VB:~/Игрушки_для_школьников$ touch Роботы.txt Конструктор.txt Настольные_игры.txt
+dk@dk-VB:~/Игрушки_для_школьников$ ls
+Конструктор.txt  Настольные_игры.txt  Роботы.txt
+
+dk@dk-VB:~/Игрушки_для_школьников$ cd ..
+dk@dk-VB:~$ cd Игрушки_для_дошколят/
+dk@dk-VB:~/Игрушки_для_дошколят$ touch Мягкие_игрушки.txt Куклы.txt Машинки.txt
+dk@dk-VB:~/Игрушки_для_дошколят$ ls
+Куклы.txt  Машинки.txt  Мягкие_игрушки.txt
+
+dk@dk-VB:~/Игрушки_для_дошколят$ cd ..
+dk@dk-VB:~$ mkdir Имя_Игрушки
+dk@dk-VB:~$ cp -r Игрушки_для_школьников/* Игрушки_для_дошколят/* Имя_Игрушки/
+
+dk@dk-VB:~$ mv Имя_Игрушки Игрушки
+
+dk@dk-VB:~$ ls Игрушки
+Конструктор.txt  Машинки.txt         Настольные_игры.txt
+Куклы.txt        Мягкие_игрушки.txt  Роботы.txt
+
+dk@dk-VB:~$ sudo snap install symboleditor 
+[sudo] пароль для dk: 
+symboleditor 2.1.0 от KDE✓ установлен
+dk@dk-VB:~$ sudo snap remove symboleditor 
+symboleditor удалён
+
+dk@dk-VB:~/test$ nano test.txt
+dk@dk-VB:~/test$ crontab -l
+no crontab for dk
+dk@dk-VB:~/test$ crontab -e
+no crontab for dk - using an empty one
+crontab: installing new crontab
+dk@dk-VB:~/test$ crontab -l
+*/10 * * * * cat /home/dk/test/test.txt > /home/dk/test/test.txt.bak
